@@ -20,7 +20,7 @@
 #
 ################################################################################
 
-[FD.BL33_JADE_UEFI]
+[FD.BL33_ALTRAD8UD_UEFI]
 BaseAddress   = 0x92000000|gArmTokenSpaceGuid.PcdFdBaseAddress  # The base address of the Firmware in NOR Flash.
 Size          = 0x00AC0000|gArmTokenSpaceGuid.PcdFdSize         # The size in bytes of the FLASH Device
 ErasePolarity = 1
@@ -147,10 +147,10 @@ APRIORI DXE {
   # ACPI
   #
   INF MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
-  INF Platform/Ampere/JadePkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
+  INF Platform/Ampere/Altrad8udPkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
   INF RuleOverride=ACPITABLE Silicon/Ampere/AmpereAltraPkg/AcpiCommonTables/AcpiCommonTables.inf
-  INF RuleOverride=ACPITABLE Platform/Ampere/JadePkg/AcpiTables/AcpiTables.inf
-  INF RuleOverride=ACPITABLE Platform/Ampere/JadePkg/Ac02AcpiTables/Ac02AcpiTables.inf
+  INF RuleOverride=ACPITABLE Platform/Ampere/Altrad8udPkg/AcpiTables/AcpiTables.inf
+  INF RuleOverride=ACPITABLE Platform/Ampere/Altrad8udPkg/Ac02AcpiTables/Ac02AcpiTables.inf
 
   #
   # SMBIOS
@@ -158,7 +158,7 @@ APRIORI DXE {
   INF MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   INF ArmPkg/Universal/Smbios/ProcessorSubClassDxe/ProcessorSubClassDxe.inf
   INF ArmPkg/Universal/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
-  INF Platform/Ampere/JadePkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
+  INF Platform/Ampere/Altrad8udPkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
 
   #
   # SystemFirmwareUpdateDxe

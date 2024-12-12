@@ -12,15 +12,15 @@
 #
 ################################################################################
 [Defines]
-  PLATFORM_NAME                  = Jade
+  PLATFORM_NAME                  = Altrad8ud
   PLATFORM_GUID                  = 7BDD00C0-68F3-4CC1-8775-F0F00572019F
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x0001001B
-  OUTPUT_DIRECTORY               = Build/Jade
+  OUTPUT_DIRECTORY               = Build/Altrad8ud
   SUPPORTED_ARCHITECTURES        = AARCH64
   BUILD_TARGETS                  = DEBUG|RELEASE|NOOPT
   SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = Platform/Ampere/JadePkg/JadeLinuxBoot.fdf
+  FLASH_DEFINITION               = Platform/Ampere/Altrad8udPkg/Altrad8udLinuxBoot.fdf
 
   #
   # Defines for default states.  These can be changed on the command line.
@@ -53,18 +53,18 @@
   #
   # Pcie Board
   #
-  BoardPcieLib|Platform/Ampere/JadePkg/Library/BoardPcieLib/BoardPcieLib.inf
+  BoardPcieLib|Platform/Ampere/Altrad8udPkg/Library/BoardPcieLib/BoardPcieLib.inf
 
-  OemMiscLib|Platform/Ampere/JadePkg/Library/OemMiscLib/OemMiscLib.inf
+  OemMiscLib|Platform/Ampere/Altrad8udPkg/Library/OemMiscLib/OemMiscLib.inf
 
-  PlatformBmcReadyLib|Platform/Ampere/JadePkg/Library/PlatformBmcReadyLib/PlatformBmcReadyLib.inf
-  IOExpanderLib|Platform/Ampere/JadePkg/Library/IOExpanderLib/IOExpanderLib.inf
+  PlatformBmcReadyLib|Platform/Ampere/Altrad8udPkg/Library/PlatformBmcReadyLib/PlatformBmcReadyLib.inf
+  IOExpanderLib|Platform/Ampere/Altrad8udPkg/Library/IOExpanderLib/IOExpanderLib.inf
 
 [LibraryClasses.common.DXE_RUNTIME_DRIVER]
   #
   # RTC Library: Common RTC
   #
-  RealTimeClockLib|Platform/Ampere/JadePkg/Library/PCF85063RealTimeClockLib/PCF85063RealTimeClockLib.inf
+  RealTimeClockLib|Platform/Ampere/Altrad8udPkg/Library/PCF85063RealTimeClockLib/PCF85063RealTimeClockLib.inf
 
 [LibraryClasses.common.UEFI_DRIVER, LibraryClasses.common.UEFI_APPLICATION, LibraryClasses.common.DXE_RUNTIME_DRIVER, LibraryClasses.common.DXE_DRIVER]
   SmbusLib|MdePkg/Library/DxeSmbusLib/DxeSmbusLib.inf
@@ -90,10 +90,10 @@
   # ACPI
   #
   MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
-  Platform/Ampere/JadePkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
+  Platform/Ampere/Altrad8udPkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
   Silicon/Ampere/AmpereAltraPkg/AcpiCommonTables/AcpiCommonTables.inf
-  Platform/Ampere/JadePkg/AcpiTables/AcpiTables.inf
-  Platform/Ampere/JadePkg/Ac02AcpiTables/Ac02AcpiTables.inf
+  Platform/Ampere/Altrad8udPkg/AcpiTables/AcpiTables.inf
+  Platform/Ampere/Altrad8udPkg/Ac02AcpiTables/Ac02AcpiTables.inf
 
   #
   # SMBIOS
@@ -101,7 +101,7 @@
   MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   ArmPkg/Universal/Smbios/ProcessorSubClassDxe/ProcessorSubClassDxe.inf
   ArmPkg/Universal/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
-  Platform/Ampere/JadePkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
+  Platform/Ampere/Altrad8udPkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
 
   #
   # SystemFirmwareUpdateDxe

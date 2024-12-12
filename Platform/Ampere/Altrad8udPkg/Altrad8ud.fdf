@@ -20,7 +20,7 @@
 #
 ################################################################################
 
-[FD.BL33_JADE_UEFI]
+[FD.BL33_ALTRAD8UD_UEFI]
 BaseAddress   = 0x92000000|gArmTokenSpaceGuid.PcdFdBaseAddress  # The base address of the Firmware in NOR Flash.
 Size          = 0x007C0000|gArmTokenSpaceGuid.PcdFdSize         # The size in bytes of the FLASH Device
 ErasePolarity = 1
@@ -182,7 +182,7 @@ APRIORI PEI {
 
   INF MdeModulePkg/Core/DxeIplPeim/DxeIpl.inf
 
-  INF RuleOverride = FMP_IMAGE_DESC Platform/Ampere/JadePkg/Capsule/SystemFirmwareDescriptor/SystemFirmwareDescriptor.inf
+  INF RuleOverride = FMP_IMAGE_DESC Platform/Ampere/Altrad8udPkg/Capsule/SystemFirmwareDescriptor/SystemFirmwareDescriptor.inf
 
   FILE FV_IMAGE = 9E21FD93-9C72-4c15-8C4B-E77F1DB2D792 {
     SECTION GUIDED EE4E5898-3914-4259-9D6E-DC7BD79403CF PROCESSING_REQUIRED = TRUE {
@@ -319,7 +319,7 @@ APRIORI DXE {
   #
   INF MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
   INF MdeModulePkg/Bus/Pci/PciHostBridgeDxe/PciHostBridgeDxe.inf
-  INF Platform/Ampere/JadePkg/Drivers/PciPlatformDxe/PciPlatformDxe.inf
+  INF Platform/Ampere/Altrad8udPkg/Drivers/PciPlatformDxe/PciPlatformDxe.inf
 
   #
   # VGA Aspeed
@@ -374,16 +374,16 @@ APRIORI DXE {
   # ACPI
   #
   INF MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
-  INF Platform/Ampere/JadePkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
+  INF Platform/Ampere/Altrad8udPkg/Drivers/AcpiPlatformDxe/AcpiPlatformDxe.inf
   INF RuleOverride=ACPITABLE Silicon/Ampere/AmpereAltraPkg/AcpiCommonTables/AcpiCommonTables.inf
-  INF RuleOverride=ACPITABLE Platform/Ampere/JadePkg/AcpiTables/AcpiTables.inf
-  INF RuleOverride=ACPITABLE Platform/Ampere/JadePkg/Ac02AcpiTables/Ac02AcpiTables.inf
+  INF RuleOverride=ACPITABLE Platform/Ampere/Altrad8udPkg/AcpiTables/AcpiTables.inf
+  INF RuleOverride=ACPITABLE Platform/Ampere/Altrad8udPkg/Ac02AcpiTables/Ac02AcpiTables.inf
 
   #
   # SMBIOS
   #
   INF MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
-  INF Platform/Ampere/JadePkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
+  INF Platform/Ampere/Altrad8udPkg/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
   INF ArmPkg/Universal/Smbios/ProcessorSubClassDxe/ProcessorSubClassDxe.inf
   INF ArmPkg/Universal/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
 
@@ -447,7 +447,7 @@ READ_STATUS        = TRUE
 READ_LOCK_CAP      = TRUE
 READ_LOCK_STATUS   = TRUE
 
-  INF RuleOverride = FMP_IMAGE_DESC Platform/Ampere/JadePkg/Capsule/SystemFirmwareDescriptor/SystemFirmwareDescriptor.inf
+  INF RuleOverride = FMP_IMAGE_DESC Platform/Ampere/Altrad8udPkg/Capsule/SystemFirmwareDescriptor/SystemFirmwareDescriptor.inf
 
 [FV.CapsuleDispatchFv]
 FvAlignment        = 8

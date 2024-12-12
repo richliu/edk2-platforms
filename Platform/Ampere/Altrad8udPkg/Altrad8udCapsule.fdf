@@ -20,7 +20,7 @@
 #
 ################################################################################
 
-[FD.JADE_SCP_FIRMWARE_CAPSULE]
+[FD.ALTRAD8UD_SCP_FIRMWARE_CAPSULE]
 BaseAddress   = 0x00000000  # The base address of the Firmware in NOR Flash.
 Size          = 0x00050000  # The size in bytes of the FLASH Device
 ErasePolarity = 1
@@ -31,7 +31,7 @@ FILE = $(WORKSPACE)/$(OUTPUT_DIRECTORY)/$(TARGET)_$(TOOL_CHAIN_TAG)/FV/SYSTEMFIR
 0x00010000|0x00040000
 FILE = $(SCP_IMAGE)
 
-[FD.JADE_UEFI_ATF_FIRMWARE_CAPSULE]
+[FD.ALTRAD8UD_UEFI_ATF_FIRMWARE_CAPSULE]
 BaseAddress   = 0x00000000  # The base address of the Firmware in NOR Flash.
 Size          = 0x00D10000  # The size in bytes of the FLASH Device
 ErasePolarity = 1
@@ -72,7 +72,7 @@ READ_LOCK_CAP      = TRUE
 READ_LOCK_STATUS   = TRUE
 
 FILE RAW = 431C06ED-4FE2-438F-98A3-A9B1FD923019 { # PcdEdkiiSystemFirmwareFileGuid
-    FD = JADE_SCP_FIRMWARE_CAPSULE
+    FD = ALTRAD8UD_SCP_FIRMWARE_CAPSULE
   }
 
 FILE RAW = ce57b167-b0e4-41e8-a897-5f4feb781d40 { # gEdkiiSystemFmpCapsuleDriverFvFileGuid
@@ -80,7 +80,7 @@ FILE RAW = ce57b167-b0e4-41e8-a897-5f4feb781d40 { # gEdkiiSystemFmpCapsuleDriver
   }
 
 FILE RAW = 812136D3-4D3A-433A-9418-29BB9BF78F6E { # gEdkiiSystemFmpCapsuleConfigFileGuid
-    Platform/Ampere/JadePkg/Capsule/SystemFirmwareUpdateConfig/SCPFirmwareUpdateConfig.ini
+    Platform/Ampere/Altrad8udPkg/Capsule/SystemFirmwareUpdateConfig/SCPFirmwareUpdateConfig.ini
   }
 
 [FmpPayload.FmpPayloadScpSystemFirmwarePkcs7]
@@ -93,7 +93,7 @@ CERTIFICATE_GUID          = 4AAFD29D-68DF-49EE-8AA9-347D375665A7 # PKCS7
 
 FV = SystemScpFirmwareUpdateCargo
 
-[Capsule.JadeScpFirmwareUpdateCapsuleFmpPkcs7]
+[Capsule.Altrad8udScpFirmwareUpdateCapsuleFmpPkcs7]
 CAPSULE_GUID                = 6dcbd5ed-e82d-4c44-bda1-7194199ad92a # gEfiFmpCapsuleGuid
 CAPSULE_HEADER_SIZE         = 0x20
 CAPSULE_HEADER_INIT_VERSION = 0x1
@@ -119,7 +119,7 @@ READ_LOCK_CAP      = TRUE
 READ_LOCK_STATUS   = TRUE
 
 FILE RAW = 431C06ED-4FE2-438F-98A3-A9B1FD923019 { # PcdEdkiiSystemFirmwareFileGuid
-    FD = JADE_UEFI_ATF_FIRMWARE_CAPSULE
+    FD = ALTRAD8UD_UEFI_ATF_FIRMWARE_CAPSULE
   }
 
 FILE RAW = ce57b167-b0e4-41e8-a897-5f4feb781d40 { # gEdkiiSystemFmpCapsuleDriverFvFileGuid
@@ -127,7 +127,7 @@ FILE RAW = ce57b167-b0e4-41e8-a897-5f4feb781d40 { # gEdkiiSystemFmpCapsuleDriver
   }
 
 FILE RAW = 812136D3-4D3A-433A-9418-29BB9BF78F6E { # gEdkiiSystemFmpCapsuleConfigFileGuid
-    Platform/Ampere/JadePkg/Capsule/SystemFirmwareUpdateConfig/SystemFirmwareUpdateConfig.ini
+    Platform/Ampere/Altrad8udPkg/Capsule/SystemFirmwareUpdateConfig/SystemFirmwareUpdateConfig.ini
   }
 
 [FmpPayload.FmpPayloadSystemFirmwarePkcs7]
@@ -140,7 +140,7 @@ CERTIFICATE_GUID          = 4AAFD29D-68DF-49EE-8AA9-347D375665A7 # PKCS7
 
 FV = SystemFirmwareUpdateCargo
 
-[Capsule.JadeUefiAtfFirmwareUpdateCapsuleFmpPkcs7]
+[Capsule.Altrad8udUefiAtfFirmwareUpdateCapsuleFmpPkcs7]
 CAPSULE_GUID                = 6dcbd5ed-e82d-4c44-bda1-7194199ad92a # gEfiFmpCapsuleGuid
 CAPSULE_HEADER_SIZE         = 0x20
 CAPSULE_HEADER_INIT_VERSION = 0x1
