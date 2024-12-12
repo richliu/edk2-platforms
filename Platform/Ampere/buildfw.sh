@@ -41,7 +41,7 @@ usage () {
   echo "  Available platforms:"
   echo "    ADLINK     -> ComHpcAlt"
   echo "    Ampere     -> Jade"
-  echo "    ASRockRack -> Altrad8ud2"
+  echo "    ASRockRack -> Altrad8ud"
 
   exit 1
 }

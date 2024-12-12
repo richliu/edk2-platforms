@@ -8,7 +8,7 @@
 
 [Defines]
   INF_VERSION                    = 0x0001001B
-  BASE_NAME                      = JadeAcpiTables
+  BASE_NAME                      = Altrad8udAcpiTables
   FILE_GUID                      = 5ADDBC13-8634-480C-9B94-671B7855CDB8
   MODULE_TYPE                    = USER_DEFINED
   VERSION_STRING                 = 1.0

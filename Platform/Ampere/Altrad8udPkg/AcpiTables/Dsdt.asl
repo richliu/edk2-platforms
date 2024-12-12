@@ -6,10 +6,10 @@
 
 **/
 
-DefinitionBlock("Dsdt.aml", "DSDT", 0x02, "Ampere", "Jade", 1) {
+DefinitionBlock("Dsdt.aml", "DSDT", 0x02, "ASRR", "D8UD", 1) {
   //
   // Board Model
-  Name(\BDMD, "Jade Board")
+  Name(\BDMD, "ASRR Altrad8ud Board")
   Name(AERF, 0)  // PCIe AER Firmware-First
   Name(TPMF, 0)  // TPM presence
 
